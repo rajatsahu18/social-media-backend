@@ -57,10 +57,6 @@ export const getPosts = async (req, res, next) => {
       return friends.includes(post?.userId?._id.toString());
     });
 
-    // const otherPosts = posts?.filter(
-    //   (post) => !friends.includes(post?.user?._id.toString())
-    // );
-
     let postsRes = null;
 
     if (friendsPosts?.length > 0) {
